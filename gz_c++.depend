@@ -1,0 +1,216 @@
+# depslib dependency file v1.0
+1464953984 source:e:\codeblocks\project\gz_c++\bits.c
+	"tailor.h"
+	"gzip.h"
+	"crypt.h"
+	<stdio.h>
+
+1463917076 e:\codeblocks\project\gz_c++\tailor.h
+	<io.h>
+	<io.h>
+	<dos.h>
+	<io.h>
+	<malloc.h>
+	<alloc.h>
+	<malloc.h>
+	<file.h>
+	<unixio.h>
+	<fcntl.h>
+
+1478746760 e:\codeblocks\project\gz_c++\gzip.h
+	<stdio.h>
+	<string.h>
+	<memory.h>
+	<strings.h>
+
+1463917076 e:\codeblocks\project\gz_c++\crypt.h
+
+1463917076 source:e:\codeblocks\project\gz_c++\crypt.c
+
+1463917076 source:e:\codeblocks\project\gz_c++\deflate.c
+	<stdio.h>
+	"tailor.h"
+	"gzip.h"
+	"lzw.h"
+
+1463917076 e:\codeblocks\project\gz_c++\lzw.h
+	"gzip.h"
+
+1463917076 source:e:\codeblocks\project\gz_c++\getopt.c
+	"config.h"
+	<stdio.h>
+	"tailor.h"
+	<stdlib.h>
+	"getopt.h"
+	<string.h>
+
+1463917076 e:\codeblocks\project\gz_c++\getopt.h
+
+1478775159 source:e:\codeblocks\project\gz_c++\gzip.c
+	<unistd.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<errno.h>
+	<string.h>
+	<windows.h>
+	<ctype.h>
+	<sys/types.h>
+	<signal.h>
+	<sys/stat.h>
+	<errno.h>
+	<windows.h>
+	"tailor.h"
+	"gzip.h"
+	"lzw.h"
+	"revision.h"
+	"getopt.h"
+	<sys/time.h>
+	<time.h>
+	<fcntl.h>
+	<unistd.h>
+	<stdlib.h>
+	<dirent.h>
+	<sys/dir.h>
+	<sys/ndir.h>
+	<ndir.h>
+	<utime.h>
+	<sys/utime.h>
+	<sys/file.h>
+
+1463917076 e:\codeblocks\project\gz_c++\revision.h
+
+1478745725 source:e:\codeblocks\project\gz_c++\inflate.c
+	<stdio.h>
+	<sys/types.h>
+	<math.h>
+	<time.h>
+	"tailor.h"
+	"keyword.h"
+	"ac.h"
+	<stdlib.h>
+	"gzip.h"
+
+1463917076 e:\codeblocks\project\gz_c++\keyword.h
+	<stdlib.h>
+	<stdio.h>
+	"charlist.h"
+	<string.h>
+
+1463917076 e:\codeblocks\project\gz_c++\charlist.h
+	<stdio.h>
+	<stdlib.h>
+
+1463917076 e:\codeblocks\project\gz_c++\ac.h
+	<time.h>
+	<omp.h>
+	"acsmx.h"
+
+1463917076 e:\codeblocks\project\gz_c++\acsmx.h
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<stdio.h>
+
+1466655544 source:e:\codeblocks\project\gz_c++\kmp.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1463917076 source:e:\codeblocks\project\gz_c++\lzw.c
+	"tailor.h"
+	"gzip.h"
+	"lzw.h"
+
+1463917076 source:e:\codeblocks\project\gz_c++\trees.c
+	<ctype.h>
+	"tailor.h"
+	"gzip.h"
+
+1463917076 source:e:\codeblocks\project\gz_c++\unlzh.c
+	<stdio.h>
+	"tailor.h"
+	"gzip.h"
+	"lzw.h"
+
+1463917076 source:e:\codeblocks\project\gz_c++\unlzw.c
+	<sys/types.h>
+	"tailor.h"
+	<unistd.h>
+	<fcntl.h>
+	"gzip.h"
+	"lzw.h"
+
+1463917076 source:e:\codeblocks\project\gz_c++\unpack.c
+	"tailor.h"
+	"gzip.h"
+	"crypt.h"
+
+1478597357 source:e:\codeblocks\project\gz_c++\unzip.c
+	"tailor.h"
+	"gzip.h"
+	"crypt.h"
+	<time.h>
+
+1463917076 source:e:\codeblocks\project\gz_c++\util.c
+	<ctype.h>
+	<errno.h>
+	<sys/types.h>
+	"tailor.h"
+	<unistd.h>
+	<fcntl.h>
+	<stdlib.h>
+	"gzip.h"
+	"crypt.h"
+
+1463917076 source:e:\codeblocks\project\gz_c++\zip.c
+	<ctype.h>
+	<sys/types.h>
+	"tailor.h"
+	"gzip.h"
+	"crypt.h"
+	<unistd.h>
+	<fcntl.h>
+
+1478745141 source:e:\codeblocks\project\gz_c++\gzip.cpp
+	<ctype.h>
+	<sys/types.h>
+	<signal.h>
+	<sys/stat.h>
+	<errno.h>
+	<windows.h>
+	"tailor.h"
+	"gzip.h"
+	"lzw.h"
+	"revision.h"
+	"getopt.h"
+	<sys/time.h>
+	<time.h>
+	<fcntl.h>
+	<unistd.h>
+	<stdlib.h>
+	<dirent.h>
+	<sys/dir.h>
+	<sys/ndir.h>
+	<ndir.h>
+	<utime.h>
+	<sys/utime.h>
+	<sys/file.h>
+
+1478786280 source:e:\codeblocks\project\gz_c++\main.cpp
+	"main.h"
+
+1478767207 e:\codeblocks\project\gz_c++\main.h
+	<iostream>
+	<string>
+	<unistd.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<cstring>
+	<cstdlib>
+	<cstdio>
+	<errno.h>
+	<string.h>
+	<windows.h>
+
