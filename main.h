@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdio.h>
 #include <string>
 #include <unistd.h>
 #include <sys/types.h>
@@ -8,10 +9,11 @@
 #include <cstdlib>
 #include <cstdio>
 #include <errno.h>
-#include<string.h>
+#include <string.h>
 #include <windows.h>
 extern "C" int gzip(int argc,char **argv);
-
+extern __int64 c[10];
+LARGE_INTEGER  large_interger;
 using namespace std;
 
 #define BUF_SIZE 4*1024
@@ -66,4 +68,15 @@ namespace File
     fclose(fp);
   }
 
+}
+
+
+
+int file_size2(char* filename)
+{
+    struct stat statbuf;
+    stat(filename,&statbuf);
+    int size=statbuf.st_size;
+
+    return size;
 }

@@ -106,10 +106,13 @@ static char rcsid[] = "$Id: inflate.c,v 0.14 1993/06/10 13:27:04 jloup Exp $";
 #include <time.h>
 #include "tailor.h"
 #include "keyword.h"
-#include"ac.h"
+#include"inflate.h"
+#include <windows.h>
 #if defined(STDC_HEADERS) || !defined(NO_STDLIB_H)
 #  include <stdlib.h>
 #endif
+#define FILESIZE 104795316
+extern LARGE_INTEGER  large_interger;
 
 int LIST_COUNT;                                                                                                                                                          //关键词列表数量
 int keylist_len[MAXKEYWORD];                                                                                                                               //每个关键词的字节
@@ -533,7 +536,9 @@ struct huft *t;         /* table to free */
   return 0;
 }
 
-
+int countnumber=0;
+int myflag[10]={0,0,0,0,0,0,0,0,0,0};
+__int64 c[10];
 int inflate_codes(tl, td, bl, bd)
 struct huft *tl, *td;   /* literal/length and distance decoder tables */
 int bl, bd;             /* number of bits decoded by tl[] and td[] */
@@ -586,12 +591,22 @@ int bl, bd;             /* number of bits decoded by tl[] and td[] */
 	  }
 	  if (flag == 1)
 		  index++;*/
+      for(int i=0;i<9;i++)
+      {
+          if(countnumber>FILESIZE*(0.1*(i+1)+0.01)&&!myflag[i])
+          {
+            QueryPerformanceCounter(&large_interger);
+            c[i] = large_interger.QuadPart;
+            myflag[i]=1;
+          }
+      }
       Tracevv((stderr, "%c", slide[w-1]));
       if (w == WSIZE)
       {
         flush_output(w);
         w = 0;
       }
+      countnumber++;
     }
     else                        /* it's an EOB or a length */
     {
@@ -660,11 +675,13 @@ int bl, bd;             /* number of bits decoded by tl[] and td[] */
           memcpy(slide + w, slide + d, e);
           w += e;
           d += e;
+          countnumber+=e;
         }
         else                      /* do it slow to avoid memcpy() overlap */
 #endif /* !NOMEMCPY */
           do {
             slide[w++] = slide[d++];
+            countnumber++;
 	    Tracevv((stderr, "%c", slide[w-1]));
           } while (--e);
         if (w == WSIZE)
@@ -1153,7 +1170,8 @@ int inflate()
     if (hufts > h)
       h = hufts;
   } while (!e);
-
+  QueryPerformanceCounter(&large_interger);
+  c[9] = large_interger.QuadPart;
   /* Undo too much lookahead. The next read will be byte aligned so we
    * can discard unused bits in the last meaningful byte.
    */

@@ -2,16 +2,13 @@
 #define ORIG_FILE   "file6"
 #define CHANGE_FILE "file6_c"
 #define GZ_FILE     "file6_c.gz"
-int file_size2(char* filename)
-{
-    struct stat statbuf;
-    stat(filename,&statbuf);
-    int size=statbuf.st_size;
 
-    return size;
-}
+
+
+
 int main (int argc,char **argv)
 {
+    /*
     FILE *record=fopen("record","wb");
     int i,j;
     double percent,ffront,frear;
@@ -46,6 +43,22 @@ int main (int argc,char **argv)
         fprintf(record,"\n");
     }
 
+    fclose(record);
+    */
+    FILE *record=fopen("record","a+");
+    __int64 c1;
+    double dff;
+
+
+    QueryPerformanceFrequency(&large_interger);
+    dff = large_interger.QuadPart;
+    QueryPerformanceCounter(&large_interger);
+    c1 = large_interger.QuadPart;
+    gzip(argc,argv);
+    for(int i=0;i<10;i++)
+        fprintf(record,"%lf\t",(c[i]-c1)/dff);
+
+    fprintf(record,"\n");
     fclose(record);
     return 0;
 }

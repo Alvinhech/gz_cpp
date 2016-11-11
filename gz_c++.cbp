@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-a file6_c" />
+				<Option parameters="-d file6.gz" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
@@ -57,6 +57,7 @@
 		<Unit filename="inflate.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="inflate.h" />
 		<Unit filename="keyword.h" />
 		<Unit filename="kmp.c">
 			<Option compilerVar="CC" />
